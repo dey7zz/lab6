@@ -36,21 +36,22 @@
      img{
       max-width: 100%;
      }
-     ul{
+    ul{
       display: grid;
       grid-template-columns: 1fr 1fr;
       column-count: 2;
       gap: 45px;
       list-style: none;
       padding: 0;
-      background-color: rgb(15, 38, 49);
-      border-radius: 10px;
       
       
      }
-     li{
+    .contenu li{
       padding: 20px;
       position: relative;
+      background-color: rgb(15, 38, 49);
+      border-radius: 10px;
+      
      }
      .bouton{
       display: flex;
@@ -71,6 +72,15 @@
      .bouton :hover{
       cursor: grab;
      }
+     p {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.6rem;
+      font-variant-caps: all-petite-caps;
+      margin: 0;
+      padding: 20px;
+     }
 
        /* Module
      ========================================================================== */
@@ -82,7 +92,7 @@
       left: 450px;
       top: -5px;
       border-radius: 20px;
-      z-index: 999;
+      z-index: 900;
 
      }
 
@@ -91,4 +101,66 @@
       max-width: 925px;
       margin: 100px auto 0;
      }
+     footer{
+      height: 75px;
+      background-color: rgba(15, 38, 49, 95%);
+      border-radius: 15px 15px 0 0;
+     }
+
+     .media {
+      background-color: rgb(15, 38, 49);
+      border-radius: 0 15px 15px 0;
+      position: fixed;
+      left: 0;
+      top: 200px;
+     }
+     .media img{
+      height: 50px;
+      width: 50px;
+      padding: 10px;
+      
+     }
+     .media ul{
+      display: flex;
+      flex-direction: column;
+      gap: 5px   ;
+     }
+     .media li :hover{
+      position: relative;
+      left: 3px;
+
+     }
+
+
+   /* Modale
+     ========================================================================== */
      
+img.zoom{
+   width: 800px;
+   height: 600px;
+   background-color: white;
+   padding: 30px;
+   border-radius: 10px;
+
+}
+img.zoom :hover{
+   cursor: grab;
+}
+
+.modale { 
+   position: fixed;
+   top: 0;
+   right: 0;
+   width: 100vw;
+   height: 100vh;
+   z-index: 999;
+   background-color:rgba(0, 0, 0, 0.8);
+   display: none; 
+
+   align-items: center;
+   justify-content: center;
+   
+}
+.modale.visible{
+   display: flex;
+}
